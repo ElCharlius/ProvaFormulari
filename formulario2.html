@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>"Formulario"</title>
+</head>
+
+<body>
+    <form name="formulario" method="post" action="proces.asp">
+        <h1>Formulario Casero</h1>
+        <fieldset>
+            <legend>Datos personales</legend>
+            <input type="hidden" name="oculto" value="0">
+            <div>
+                <label for="inombre">Nombre: </label>
+                <input type="text" name="nombre" id="inombre" placeholder="Nombre">
+                <label for="iapellido1">Primer apellido: </label>
+                <input type="text" name="apellido1" id="iapellido1" placeholder="Primer apellido">
+                <label for="iapellido2">Segundo apellido: </label>
+                <input type="text" name="apellido2" id="iapellido2" placeholder="Segundo apellido">
+                <div>
+                    <label for="idni">DNI:</label>
+                    <input type="text" name="dni" id="idni" placeholder="Ej: 12345678R">
+                </div>
+                <div>
+                    <label for="iusername">Username: </label>
+                    <input type="text" name="username" id="iusername" placeholder="Ej: pepita1234">
+                    <label for="icontra">Contraseña: </label>
+                    <input type="password" name="contra" id="icontra" placeholder="Ej: vivaelrubius1234">
+                    <label for="irepcontra">Repetir contraseña: </label>
+                    <input type="password" name="repcontra" id="irepcontra" placeholder="Ej: vivaelrubius1234">
+                </div>
+                <div>
+                    <label for="iemail">Email:</label>
+                    <input type="text" name="email" id="iemail" placeholder="Ej: ejemplo@gmail.com">
+                    <label for="ifranjaedad">Franja de edad:</label>
+                    <select name="franjaedad" id="ifranjaedad">
+                        <option value="menor16">De 0 a 16 años</option>
+                        <option value="menor50">De 16 a 50 años</option>
+                        <option value="mayor50">Mayor de 50 años</option>
+                    </select>
+                </div>
+                <div>
+                    Sexo:
+                    <input type="radio" name="sex" id="ihombre" value="hombre">
+                    <label for="ihombre">Hombre</label>
+                    <input type="radio" name="sex" id="imujer" value="mujer">
+                    <label for="imujer">Mujer</label>
+                </div>
+                <div>
+                    <label for="icodigopais">Codigo de tu país: </label>
+                    <input type="text" name="codigopais" id="icodigopais" pattern="[A-Za-z]{2}"
+                        placeholder="Código de pais, Ej: Es">
+                    <label for="icodigoposat">Código postal: </label>
+                    <input type="text" name="codigopostal" id="icodigopostal" pattern="[0-9]{5}"
+                        placeholder="Código postal">
+                </div>
+                <div>
+                    <label for="iimagenpersonal">Imagen personal: </label>
+                    <input type="file" name="imagenpersonal" id="iimagenpersonal">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Otro datos de interés</legend>
+            <div>
+                Especialidad/es: <br>
+                <input type="checkbox" name="Especialidad" value="css">
+                CSS
+                <input type="checkbox" name="Especialidad" value="html5">
+                HTML5
+                <input type="checkbox" name="Especialidad" value="javascript">
+                Javascript
+                <input type="checkbox" name="Especialidad" value="python">
+                Python
+            </div>
+            <div>
+                Conocimientos: <br>
+                <input type="checkbox" name="Conocimientos" value="redessociales">
+                Redes Sociales
+                <input type="checkbox" name="Conocimientos" value="programacióncss">
+                Programación CSS
+                <input type="checkbox" name="Conocimientos" value="programaciónhtml">
+                Programación HTML
+                <input type="checkbox" name="Conocimientos" value="diseño">
+                Diseño
+            </div>
+            <div>
+                Sobre tí: <br>
+                <textarea rows="10" cols="50" name="coment">Cuéntanos sobre ti</textarea>
+            </div>
+        </fieldset>
+        <div>
+            <input type="submit" value="Enviar"><input type="reset" value="Borrar">
+        </div>
+    </form>
+</body>
+
+</html>
